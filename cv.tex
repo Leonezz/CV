@@ -96,7 +96,10 @@
 
 %debug page outer frames
 %\usepackage{showframe}
-
+\newcommand{\signed}[1]{%
+\unskip\nobreak\hfil\penalty50
+   \hskip2em\hbox{}\nobreak\hfil#1
+   \parfillskip=0pt \finalhyphendemerits=0 }
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -139,68 +142,63 @@ In addition to my academic study, I am a person of wide interests, my interests 
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2021 - present & Master Candidate at \textbf{NUAA} major in \textit{Computer Science and Technology}. \hfill \normalsize \\
-
-2017 - 2021 & Bachelor's Degree at \textbf{NUAA} major in \textit{Optoelectronic Information Science and Engineering}. \hfill (GPA: 3.2/5.0) \\ 
+2021 - present &Master Candidate at \textbf{NUAA} major in \textit{Computer Science and Technology}.
+\signed{\normalsize{(GPA:)}}\\
+2017 - 2021 &Bachelor's Degree at \textbf{NUAA} major in \textit{Optoelectronic Information Science and Engineering}.
+\signed{\normalsize{(GPA: 3.2/5.0)}} \\
 \end{tabularx}
 
 %Experience
 \section{Project Experience}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{tabularx}{\linewidth}{ @{}X@{}  }
 \textbf{A Measuring System of Metal Surface Flatness Based on Electromagnetic Induction Principle} as \textit{Creator and maintainer}.
-& \hfill Sept. 2018 - Nov. 2018 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize}
-            \item This project is supported by the NUAA Innovation and Entrepreneurship Program.
-            \item We designed a tiny PCB coil in this project as the electromagnetic sensor and power this sensor with a dedicated chip.
-            \item The dedicated chip collect the electromagnetic impedance value between the coil sensor and the surface of the object
-            to be tested, and encode the value into digital data.
-            \item We collect the data that represents the impedance (i.e. the distance between sensor and the surface to be tested)
-            with various distances, and then fit the impedance-distance value pairs with the well-known Least Square Estimation Algorithm
-            into a polynomial function, with which we can calculate distance from a impedance data.
-            \item Also note this system is implemented with a 2-axis moving platform powered by G-code thus it is able to scan a surface automatically.
-        \end{itemize}
-    \end{minipage}
-} \\
+\signed{Sept. 2018 - Nov. 2018}\\[3.75pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] This project is supported by the NUAA Innovation and Entrepreneurship Program.
+        \item[-] We designed a tiny PCB coil in this project as the electromagnetic sensor and power this sensor with a dedicated chip.
+        \item[-] The dedicated chip collect the electromagnetic impedance value between the coil sensor and the surface of the object
+        to be tested, and encode the value into digital data.
+        \item[-] We collect the data that represents the impedance (i.e. the distance between sensor and the surface to be tested)
+        with various distances, and then fit the impedance-distance value pairs with the well-known Least Square Estimation Algorithm
+        into a polynomial function, with which we can calculate distance from a impedance data.
+        \item[-] Also note this system is implemented with a 2-axis moving platform powered by G-code thus it is able to scan a surface automatically.
+    \end{itemize}
+\end{minipage}\\
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{tabularx}{\linewidth}{ @{}X@{} }
     \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} as \textit{Creator and maintainer}.
-    & \hfill Jun. 2019 - Dec. 2019 \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{
+    \signed{Jun. 2019 - Dec. 2019} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[--] This is a personal project for charts making from data cheats, the aim of this project is to learn the programing pattern of Qt.
-            \item[--] In this project, I designed a Web-based chart visualization page for charts rendering (ECharts is used to make charts),
+            \item[-] This is a personal project for charts making from data cheats, the aim of this project is to learn the programing pattern of Qt.
+            \item[-] In this project, I designed a Web-based chart visualization page for charts rendering (ECharts is used to make charts),
             and a QWebEngine is utilized to load the page and execute the scripts.
-            \item[--] For data transferring between the Qt/C++ end and the HTML/javascript end, I setted a socket server with QWebSocketServer
+            \item[-] For data transferring between the Qt/C++ end and the HTML/javascript end, I setted a socket server with QWebSocketServer
             at the Qt/C++ end and built a brige with QWebChannel to establish a connection.
-            \item[--] During this project, I learned the usages of basic Qt widgets and the powerfull C++ libraries provided by Qt,
+            \item[-] During this project, I learned the usages of basic Qt widgets and the powerfull C++ libraries provided by Qt,
             as well as style customization techniques including CSS.
-            \item[--] I also learned the multi-thread programing patterns during this project. To be specific,
+            \item[-] I also learned the multi-thread programing patterns during this project. To be specific,
             I utilize multi-threading to load data files in another thread such that the UI thread dose not stuck.
         \end{itemize}
         \end{minipage}
-    }
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{A smart trash bin based on embedded systems} as \textit{Creator and maintainer}.
-    & \hfill Dec. 2020 - May 2021 \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+    \textbf{An embedded system for smart trash bin} as \textit{Creator and maintainer}.
+    \signed{Dec. 2020 - May 2021} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[--] In this project, I designed both the hardware and the software of an embedded system for a smart trash bin.
-            \item[--] For the hardware part, I designed a core board for STM32F103RET6 MCU and a driver board for over 6 sensors
+            \item[-] In this project, I designed both the hardware and the software of an embedded system for a smart trash bin.
+            \item[-] For the hardware part, I designed a core board for STM32F103RET6 MCU and a driver board for over 6 sensors
             and 1 executor as well as the MODBUS interface for data transferring. To summarize, 5 U(S)ART and 1 ADC of the MCU are utilized.
-            \item[--] For the software part, I adapted a MODBUS slave protocol stack implementation to the MCU platform as the communication
+            \item[-] For the software part, I adapted a MODBUS slave protocol stack implementation to the MCU platform as the communication
             interface for interaction between MCUs and between MCU and PC, and I implemented all the drivers for the sensors and executor
             based on the STM32 HAL code base.
         \end{itemize}
         \end{minipage}
-    }
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -208,28 +206,25 @@ In addition to my academic study, I am a person of wide interests, my interests 
 %----------------------------------------------------------------------------------------
 \section{Publications}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{FETL: Fusing Layer Representations for More Efficient Transfer Learning in NLP}. \textit{zhuwenq}. under review.
-& \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+\textbf{FETL: Fusing Layer Representations for More Efficient Transfer Learning in NLP}. \signed{\textit{zhuwenq}. under review.}\\[3.75pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Following the nascent research area of Parameter Efficient Transfer Learning (PETL),
+        \item[-] Following the nascent research area of Parameter Efficient Transfer Learning (PETL),
         we designed a simple yet effective architecture for PETL in NLP.
-        \item[--] Inspired by the concepts of that knowledge about diverse aspects of language is embedded
+        \item[-] Inspired by the concepts of that knowledge about diverse aspects of language is embedded
         in different layers of PLM, and that not all of the knowledge is needed for a specific task,
         we propose to combine the representations from all PLM layers explicitly and individually
         with a attention-based fusion layer for a better transferring.
-        \item[--] Our network works outside the PLM as a side-network, thus the backpropagation
+        \item[-] Our network works outside the PLM as a side-network, thus the backpropagation
         path does not involve the PLM with our method. Hence the training speed and training GPU
         memory usage are significantly better with our method than with other PETL methods.
-        \item[--] Experiments on both low-resource and high-resource scenarios of the GLUE benchmark
+        \item[-] Experiments on both low-resource and high-resource scenarios of the GLUE benchmark
         show that our method achieves promising results with negligible costs.
-        \item[--] We also try to interpret the inner effects of the proposed fusion layer by analyzing
+        \item[-] We also try to interpret the inner effects of the proposed fusion layer by analyzing
         the layer attention vectors task-wisely and token-wisely.
     \end{itemize}
     \end{minipage}
-}
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
