@@ -79,7 +79,7 @@
 
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\raggedright\bf}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
@@ -106,11 +106,9 @@
 %----------------------------------------------------------------------------------------
 \usepackage{CJKutf8}
 \begin{document}
-\begin{CJK*}{UTF8}{gbsn}
-
 % non-numbered pages
-\pagestyle{empty} 
-
+\pagestyle{empty}
+\begin{CJK*}{UTF8}{gbsn}
 %----------------------------------------------------------------------------------------
 %	TITLE
 %----------------------------------------------------------------------------------------
@@ -123,11 +121,11 @@
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{zhuwenq} \\[7.5pt]
-\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \ 
-\href{https://t.me/ppingzi}{\raisebox{-0.05\height}\faTelegramPlane\ ppingzi} \ $|$ \ 
+\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \  
 \href{https://zhuwenq-blog.netlify.app}{\raisebox{-0.05\height}\faGlobe \ Blog} \ $|$ \ 
 \href{mailto:zhuwenqa@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ zhuwenqa@outlook.com} \ $|$ \ 
-\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \\
+\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \ $|$ \
+\raisebox{-0.05\height}\faUserCircle \ 软件开发工程师 \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -181,7 +179,7 @@
     \signed{2019.6 - 2019.12} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[-] 本项目是一个个人学习性质的桌面软件项目, 目的是学习使用 Qt 的变成范式, 其功能是从数据表格绘制图表.
+            \item[-] 本项目是一个个人学习性质的桌面软件项目, 目的是学习 Qt 的编程范式, 其功能是从数据表格绘制图表.
             \item[-] 本项目中, 我实现了一个基于 Web 技术 (ECharts) 的可视化页面以渲染图表, 并使用 QWebEngine 控件加载页面和执行脚本.
             \item[-] 为实现 Qt/C++ 端和 HTML/javascript 端之间的数据交互, 我在 Qt/C++ 端使用 QWebSocketServer 运行了一个 socket server, 并且使用 QWebChannel 为该 socket server 和 Web 页面建立了连接.
             \item[-] 通过本项目, 我学习了大量 Qt 控件的基本用法和 Qt 为 C++ 提供的库的用法, 同时也学习了包括 CSS 在内的 UI 风格设置方式.
@@ -259,7 +257,7 @@
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
         \item[-] 参与公司的物理实验设备热力学参数测试仪的嵌入式 Linux 软件开发工作，利用物理知识对软件需求建模分析.
         \item[-] 使用 Qt 软件开发框架开发了实验设备驱动和交互的嵌入式软件, 实现了串口读取温度传感器数据和串口控制加热器的功能以及基于最小二乘估计算法的数据分析功能.
-        \item[-] 软件最终部署到运行 Ubuntu 操作系统的 ARM 设备中, 由于设备硬件已经组装完成, 只能通过 U 盘向其传输数据, 我使用 Shell 脚本开发了用于代码编译和设置软件为启动项的部署工具.
+        \item[-] 软件最终部署到运行 Ubuntu 操作系统的 ARM 设备中, 由于设备硬件已经组装完成, 只能通过 U 盘向其传输数据, 我编写了用于代码编译和设置软件为启动项的部署工具.
     \end{itemize}
 \end{minipage}\\
 \end{tabularx}
@@ -271,7 +269,7 @@
 \begin{tabularx}{\linewidth}{ X@{}  }
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[-] 熟悉 C++11, C++14, C++17 等现代 C++，具有 Qt 等 C++ 框架的开发经验.
+        \item[-] 熟悉 C++11, C++14, C++17 等现代 C++，具有 Qt 等 C++ 框架和嵌入式系统的开发经验.
         \item[-] 对模板元编程有一定了解与兴趣, 正在学习 Nicolai M. Josuttis 所著的 \textit{C++ templates: the complete guide}.
         \item[-] 对深度学习以及自然语言处理有研究和开发经验, 熟悉 Python 编程语言和 pytorch, tensor, jax 等深度学习框架和工具.
         \item[-] 具备良好的代码风格, 注重代码质量，热衷提高代码的健壮性和可读性.
