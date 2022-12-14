@@ -26,8 +26,9 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
+\documentclass[a4paper,12pt]{ctexart}
+\linespread{1.0}
+\setlength{\parskip}{1em}
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
@@ -48,7 +49,7 @@
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
 
 %other packages for formatting
 \RequirePackage{color}
@@ -132,71 +133,69 @@
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-I am currently a postgraduate major in computer science, my research interests include Natural Language Processing, Parameter Efficient Transfer Learning and Information Extraction. Before my postgraduate's study, I graduate from the optical major of physics faculty.
+\section{个人简介}
+我目前在南京航空航天大学计算机科学与技术学院攻读硕士学位, 我的研究兴趣包括\textbf{自然语言处理}, \textbf{参数高效的轻量化迁移学习}和\textbf{信息抽取}.
+攻读硕士学位之前, 我曾就读于南京航空航天大学物理系光学专业, 并获得工学学士学位.
 
-In addition to my academic study, I am a person of wide interests, my interests include modern C++, embedded systems, advanced deep learning technics, reading books, photography and making coffee.
-
+除专业学习之外, 我对许多东西都有广泛的兴趣. 我的主要兴趣包括: Modern C++, 嵌入式系统, 较为先进的深度学习技术, 读书, 摄影和冲咖啡.
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education}
+\section{教育经历}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2021 - present &Master Candidate at \textbf{NUAA} major in \textit{Computer Science and Technology}.
-\signed{\normalsize{(GPA:)}}\\
-2017 - 2021 &Bachelor's Degree at \textbf{NUAA} major in \textit{Optoelectronic Information Science and Engineering}.
-\signed{\normalsize{(GPA: 3.2/5.0)}} \\
+2021 - 目前 &\textbf{南京航空航天大学}, 计算机科学与技术, \textit{硕士研究生}.\\
+2017 - 2021 &\textbf{南京航空航天大学}, 光电信息科学与工程, \textit{工学学士学位}.\\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] GPA 3.2/5, 排名：9/25,CET-4:540,CET-6:426
+        \item[-] 曾获国家励志奖学金(2020), 优秀学生奖学金(2020)，学业奖学金(2018，2019，2020).
+        \item[-] 曾主持和参与省级科创项目两项, 校级科创项目一项.
+        \item[-] 获得南京航空航天大学 2021 届"学术专长"类推免资格.
+    \end{itemize}
+\end{minipage}
+}
 \end{tabularx}
 
 %Experience
-\section{Project Experience}
+\section{项目经历}
 
 \begin{tabularx}{\linewidth}{ @{}X@{}  }
-\textbf{A Measuring System of Metal Surface Flatness Based on Electromagnetic Induction Principle} as \textit{Creator and maintainer}.
-\signed{Sept. 2018 - Nov. 2018}\\[3.75pt]
+\textbf{基于电磁感应原理的金属表面平整度检测系统}, \textit{项目负责人}.
+\signed{2018.9 - 2018.11}\\[3.75pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[-] This project is supported by the NUAA Innovation and Entrepreneurship Program.
-        \item[-] We designed a tiny PCB coil in this project as the electromagnetic sensor and power this sensor with a dedicated chip.
-        \item[-] The dedicated chip collect the electromagnetic impedance value between the coil sensor and the surface of the object
-        to be tested, and encode the value into digital data.
-        \item[-] We collect the data that represents the impedance (i.e. the distance between sensor and the surface to be tested)
-        with various distances, and then fit the impedance-distance value pairs with the well-known Least Square Estimation Algorithm
-        into a polynomial function, with which we can calculate distance from a impedance data.
-        \item[-] Also note this system is implemented with a 2-axis moving platform powered by G-code thus it is able to scan a surface automatically.
+        \item[-] 2019 年学校科创项目, 受南京航空航天大学大学生创新创业训练计划资助.
+        \item[-] 项目中, 我们设计了一种微小尺度的 PCB 线圈作为电磁传感器, 并且使用专用 IC 驱动该传感器.
+        \item[-] 我们使用专用 IC 采集电磁线圈与被测金属表面之间的电磁阻抗强度, 并将其编码为数字信号.
+        \item[-] 我们使用该数字信号代表传感器和被测金属表面之间的距离, 通过实验采集多对电磁阻抗数值-距离. 对于采集到的数据, 我们通过最小二乘估计算法将其拟合到一个多项式函数, 通过该多项式函数我们就可以从一定范围的电磁感应强度数值计算出距离.
+        \item[-] 为实现自动的表面扫描, 我们实现了一个步进电机驱动的二维运动平台, 使用 G-code 实现对其的控制.
     \end{itemize}
 \end{minipage}\\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} as \textit{Creator and maintainer}.
-    \signed{Jun. 2019 - Dec. 2019} \\[3.75pt]
+    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}}, \textit{项目负责人}.
+    \signed{2019.6 - 2019.12} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[-] This is a personal project for charts making from data cheats, the aim of this project is to learn the programing pattern of Qt.
-            \item[-] In this project, I designed a Web-based chart visualization page for charts rendering (ECharts is used to make charts),
-            and a QWebEngine is utilized to load the page and execute the scripts.
-            \item[-] For data transferring between the Qt/C++ end and the HTML/javascript end, I setted a socket server with QWebSocketServer
-            at the Qt/C++ end and built a brige with QWebChannel to establish a connection.
-            \item[-] During this project, I learned the usages of basic Qt widgets and the powerfull C++ libraries provided by Qt,
-            as well as style customization techniques including CSS.
-            \item[-] I also learned the multi-thread programing patterns during this project. To be specific,
-            I utilize multi-threading to load data files in another thread such that the UI thread dose not stuck.
+            \item[-] 本项目是一个个人学习性质的桌面软件项目, 目的是学习使用 Qt 的变成范式, 其功能是从数据表格绘制图表.
+            \item[-] 本项目中, 我实现了一个基于 Web 技术 (ECharts) 的可视化页面以渲染图表, 并使用 QWebEngine 控件加载页面和执行脚本.
+            \item[-] 为实现 Qt/C++ 端和 HTML/javascript 端之间的数据交互, 我在 Qt/C++ 端使用 QWebSocketServer 运行了一个 socket server, 并且使用 QWebChannel 为该 socket server 和 Web 页面建立了连接.
+            \item[-] 通过本项目, 我学习了大量 Qt 控件的基本用法和 Qt 为 C++ 提供的库的用法, 同时也学习了包括 CSS 在内的 UI 风格设置方式.
+            \item[-] 本项目中, 我同时也学习了多线程编程的主要范式. 具体地说, 我在本项目中使用多线程技术加载文件, 避免了加载过程对系统 UI 的阻塞.
         \end{itemize}
         \end{minipage}
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \textbf{An embedded system for smart trash bin} as \textit{Creator and maintainer}.
-    \signed{Dec. 2020 - May 2021} \\[3.75pt]
+    \textbf{智能垃圾桶系统}, \textit{项目负责人}.
+    \signed{2020.12 - 2021.5} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[-] In this project, I designed both the hardware and the software of an embedded system for a smart trash bin.
-            \item[-] For the hardware part, I designed a core board for STM32F103RET6 MCU and a driver board for over 6 sensors
-            and 1 executor as well as the MODBUS interface for data transferring. To summarize, 5 U(S)ART and 1 ADC of the MCU are utilized.
-            \item[-] For the software part, I adapted a MODBUS slave protocol stack implementation to the MCU platform as the communication
-            interface for interaction between MCUs and between MCU and PC, and I implemented all the drivers for the sensors and executor
-            based on the STM32 HAL code base.
+            \item[-] 本项目中, 我设计了用于该智能垃圾桶的嵌入式系统的软件部分和硬件部分.
+            \item[-] 对于硬件部分, 我设计了一个 STM32F103 单片机的核心板和用于驱动 6 个传感器和 1 个执行器以及一个 MODBUS 通信接口的驱动板. 作为总结, 我们使用了 5 个串口和 1 个 ADC 接口.
+            \item[-] 对于软件部分, 我将 MODBUS 协议栈从机部分的一个开源实现迁移到 STM32 平台作为嵌入式系统与上位机系统的通信协议. 另外我基于 STM32 HAL 代码库对所有传感器和执行器做了封装.
         \end{itemize}
         \end{minipage}
 \end{tabularx}
@@ -237,18 +236,48 @@ In addition to my academic study, I am a person of wide interests, my interests 
 %\end{refsection}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
+%	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Skills}
+\section{获奖情况}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-C++ programing language, Qt, and modern C++.
-& \normalsize{Professional level at C++, experienced developer with Qt.} \\
-Deep learning and NLP, transformer models especially.
-& \normalsize{I have experience in Deep learning and NLP research.} \\
-Python programing language and pytorch, tensorflow, jax.
-& \normalsize{I am professional at python and I have worked with deep learning frameworks a lot.} \\
+2018.11 &第 15 届江苏省高校大学生物理与实验科技作品创新竞赛 \signed{\textbf{二等奖}}\\
+2019.07 &第五届全国大学生物理实验竞赛 \signed{\textbf{三等奖}}\\
+2019.11 &第 16 届江苏省高校大学生物理与实验科技作品创新竞赛 \signed{\textbf{三等奖}}\\
+2021.05 &中国大学生计算机设计大赛江苏省级赛 \signed{\textbf{二等奖}}\\
+2021.10 &中国大学生计算机设计大赛全国决赛 \signed{\textbf{三等奖}}
 \end{tabularx}
 
+%Experience
+\section{实习经历}
+
+\begin{tabularx}{\linewidth}{ @{}X@{}  }
+\textbf{南京迅兴电子科技有限公司}
+\signed{2020.6 - 2020.8}\\[3.75pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 参与公司的物理实验设备热力学参数测试仪的嵌入式 Linux 软件开发工作，利用物理知识对软件需求建模分析.
+        \item[-] 使用 Qt 软件开发框架开发了实验设备驱动和交互的嵌入式软件, 实现了串口读取温度传感器数据和串口控制加热器的功能以及基于最小二乘估计算法的数据分析功能.
+        \item[-] 软件最终部署到运行 Ubuntu 操作系统的 ARM 设备中, 由于设备硬件已经组装完成, 只能通过 U 盘向其传输数据, 我使用 Shell 脚本开发了用于代码编译和设置软件为启动项的部署工具.
+    \end{itemize}
+\end{minipage}\\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{个人总结}
+\begin{tabularx}{\linewidth}{ X@{}  }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 熟悉 C++11, C++14, C++17 等现代 C++，具有 Qt 等 C++ 框架的开发经验.
+        \item[-] 对模板元编程有一定了解与兴趣, 正在学习 Nicolai M. Josuttis 所著的 \textit{C++ templates: the complete guide}.
+        \item[-] 对深度学习以及自然语言处理有研究和开发经验, 熟悉 Python 编程语言和 pytorch, tensor, jax 等深度学习框架和工具.
+        \item[-] 具备良好的代码风格, 注重代码质量，热衷提高代码的健壮性和可读性.
+        \item[-] 掌握计算机理论基础, 计算机底层原理和良好的算法与数据结构基础.
+        \item[-] 具备良好的文档和工程实践习惯, 乐于与人合作交流和讨论.
+    \end{itemize}
+\end{minipage}\\
+\end{tabularx}
 \vfill
 \center{\footnotesize Last updated: \today}
 
