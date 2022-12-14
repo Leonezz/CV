@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{ctexart}
+\documentclass[a4paper,12pt]{article}
 \linespread{1.0}
 \setlength{\parskip}{1em}
 %----------------------------------------------------------------------------------------
@@ -104,7 +104,9 @@
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
+\usepackage{CJKutf8}
 \begin{document}
+\begin{CJK*}{UTF8}{gbsn}
 
 % non-numbered pages
 \pagestyle{empty} 
@@ -280,5 +282,5 @@
 \end{tabularx}
 \vfill
 \center{\footnotesize Last updated: \today}
-
+\end{CJK*}
 \end{document}
