@@ -1,0 +1,217 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+\newcommand{\signed}[1]{%
+\unskip\nobreak\hfil\penalty50
+   \hskip2em\hbox{}\nobreak\hfil#1
+   \parfillskip=0pt \finalhyphendemerits=0 }
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{zhuwenq} \\[7.5pt]
+\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \ 
+\href{https://t.me/ppingzi}{\raisebox{-0.05\height}\faTelegramPlane\ ppingzi} \ $|$ \ 
+\href{https://zhuwenq-blog.netlify.app}{\raisebox{-0.05\height}\faGlobe \ Blog} \ $|$ \ 
+\href{mailto:zhuwenqa@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ zhuwenqa@outlook.com} \ $|$ \ 
+\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \\
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education Experience}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2021 - present &Master Candidate at \textbf{NUAA} major in \textit{Computer Science and Technology}.
+\signed{\normalsize{(GPA:)}}\\
+2017 - 2021 &Bachelor's Degree at \textbf{NUAA} major in \textit{Optoelectronic Information Science and Engineering}.
+\signed{\normalsize{(GPA: 3.2/5.0)}} \\
+\end{tabularx}
+
+%Experience
+\section{Project Experience}
+
+\begin{tabularx}{\linewidth}{ @{}X@{}  }
+\textbf{A Measuring System of Metal Surface Flatness Based on Electromagnetic Induction Principle} as \textit{Creator and maintainer}.
+\signed{Sept. 2018 - Nov. 2018}\\[3.75pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] We designed a tiny PCB coil in this project as the electromagnetic sensor and power this sensor with a dedicated chip.
+        \item[-] The dedicated chip collect the electromagnetic impedance value between the coil sensor and the surface of the object
+        to be tested, and encode the value into digital data.
+        \item[-] Also note this system is implemented with a 2-axis moving platform powered by G-code thus it is able to scan a surface automatically.
+    \end{itemize}
+\end{minipage}\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} as \textit{Creator and maintainer}.
+    \signed{Jun. 2019 - Dec. 2019} \\[3.75pt]
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[-] This is a personal project for charts making from data cheats, the aim of this project is to learn the programing pattern of Qt.
+            \item[-] In this project, I designed a Web-based chart visualization page for charts rendering (ECharts is used to make charts),
+            and a QWebEngine is utilized to load the page and execute the scripts.
+            \item[-] For data transferring between the Qt/C++ end and the HTML/javascript end, I setted a socket server with QWebSocketServer
+            at the Qt/C++ end and built a brige with QWebChannel to establish a connection.
+        \end{itemize}
+        \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+    \textbf{An embedded system for smart trash bin} as \textit{Creator and maintainer}.
+    \signed{Dec. 2020 - May 2021} \\[3.75pt]
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[-] In this project, I designed both the hardware and the software of an embedded system for a smart trash bin.
+            \item[-] For the hardware part, I designed a core board for STM32F103RET6 MCU and a driver board for over 6 sensors
+            and 1 executor as well as the MODBUS interface for data transferring. To summarize, 5 U(S)ART and 1 ADC of the MCU are utilized.
+            \item[-] For the software part, I adapted a MODBUS slave protocol stack implementation to the MCU platform as the communication
+            interface for interaction between MCUs and between MCU and PC, and I implemented all the drivers for the sensors and executor
+            based on the STM32 HAL code base.
+        \end{itemize}
+        \end{minipage}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+%\section{Publications}
+%\begin{refsection}[citations.bib]
+%\nocite{*}
+%\printbibliography[heading=none]
+%\end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l}
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    \item[-] C++ programing language, Qt, and modern C++.
+    \item[-] Deep learning and NLP, transformer models especially.
+    \item[-] Python programing language and pytorch, tensorflow, jax, pandas, matplotlib, et.al.
+    \item[-] Master the theoretical basis of computers, the underlying principles of computers and a good foundation of algorithms and data structures.
+    \item[-] Possess good documentation and engineering practice habits, and are willing to cooperate, communicate and discuss with others.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%\vfill
+%\center{\footnotesize Last updated: \today}
+
+\end{document}
