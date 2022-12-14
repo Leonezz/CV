@@ -1,0 +1,226 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+\linespread{1.0}
+\setlength{\parskip}{1em}
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\raggedright\bf}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+\newcommand{\signed}[1]{%
+\unskip\nobreak\hfil\penalty50
+   \hskip2em\hbox{}\nobreak\hfil#1
+   \parfillskip=0pt \finalhyphendemerits=0 }
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\usepackage{CJKutf8}
+\begin{document}
+% non-numbered pages
+\pagestyle{empty} 
+\begin{CJK}{UTF8}{gbsn}
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{zhuwenq} \\[7.5pt]
+\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \  
+\href{https://zhuwenq-blog.netlify.app}{\raisebox{-0.05\height}\faGlobe \ Blog} \ $|$ \ 
+\href{mailto:zhuwenqa@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ zhuwenqa@outlook.com} \ $|$ \ 
+\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \ $|$ \
+\raisebox{-0.05\height}\faUserCircle \ 软件开发工程师 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{教育经历}
+\begin{tabularx}{\linewidth}{@{}X@{}}	
+\textbf{南京航空航天大学}, 计算机科学与技术, \textit{硕士研究生}. \signed{2021 - 目前} \\
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 获学业奖学金一等奖, 获省级竞赛二等奖一项, 国家级竞赛三等奖一项.
+    \end{itemize}
+\end{minipage}\\
+\textbf{南京航空航天大学}, 光电信息科学与工程, \textit{工学学士}. \signed{2017 - 2021} \\
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 获国家励志奖学金(2020), 优秀学生奖学金(2020)，学业奖学金(2018，2019，2020).
+        \item[-] 主持和参与省级科创项目两项, 校级科创项目一项. 获省级竞赛二等奖一项, 三等奖一项, 国家级竞赛三等奖一项. 获得南京航空航天大学 2021 届"学术专长"类推免资格.
+    \end{itemize}
+\end{minipage}\\
+\end{tabularx}
+
+%Experience
+\section{项目经历}
+
+\begin{tabularx}{\linewidth}{ @{}X@{}  }
+\textbf{基于电磁感应原理的金属表面平整度检测系统}, \textit{项目负责人}.
+\signed{2018.9 - 2018.11}\\[3.75pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 项目中, 我们设计了一种微小尺度的 PCB 线圈作为电磁传感器, 并且使用专用 IC 驱动该传感器.
+        \item[-] 我们使用专用 IC 采集电磁线圈与被测金属表面之间的电磁阻抗强度, 并将其编码为数字信号.
+        \item[-] 为实现自动扫描, 我们搭建了一个步进电机驱动的二维运动平台, 使用 G-code 实现对其的控制.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}}, \textit{项目负责人}.
+    \signed{2019.6 - 2019.12} \\[3.75pt]
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[-] 本项目是一个个人学习性质的桌面软件, 目的是学习 Qt 编程的范式, 其功能是从数据表格绘制图表.
+            \item[-] 本项目中, 我实现了一个基于 Web 技术 (ECharts) 的可视化页面以渲染图表, 并使用 QWebEngine 控件加载页面和执行脚本.
+            \item[-] 为实现 Qt/C++ 端和 HTML/javascript 端之间的数据交互, 我在 Qt/C++ 端使用 QWebSocketServer 运行了一个 socket server, 并且使用 QWebChannel 为该 socket server 和 Web 页面建立了连接.
+        \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+    \textbf{用于智能垃圾桶的嵌入式系统}, \textit{项目负责人}.
+    \signed{2020.12 - 2021.5} \\[3.75pt]
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[-] 本项目中, 我设计了用于该智能垃圾桶的嵌入式系统的软件部分和硬件部分.
+            \item[-] 对于硬件部分, 我设计了一个 STM32F103 单片机的核心板和用于驱动 6 个传感器和 1 个执行器以及一个 MODBUS 通信接口的驱动板. 作为总结, 我们使用了 5 个串口和 1 个 ADC 接口.
+            \item[-] 对于软件部分, 我将 MODBUS 协议栈从机部分的一个开源实现迁移到 STM32 平台作为嵌入式系统与上位机系统的通信协议. 另外我基于 STM32 HAL 代码库对所有传感器和执行器做了封装.
+        \end{itemize}
+        \end{minipage}
+\end{tabularx}
+
+%Experience
+\section{实习经历}
+
+\begin{tabularx}{\linewidth}{ @{}X@{}  }
+\textbf{南京迅兴电子科技有限公司}
+\signed{2020.6 - 2020.8}\\[3.75pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 参与公司的物理实验设备热力学参数测试仪的嵌入式 Linux 软件开发工作.
+        \item[-] 使用 Qt 软件开发框架开发了实验设备驱动和交互的嵌入式软件, 实现了串口读取温度传感器数据和串口控制加热器的功能以及基于最小二乘估计算法的数据分析功能.
+        \item[-] 软件最终部署到运行 Ubuntu 操作系统的 ARM 设备中, 由于设备硬件已经组装完成, 只能通过 U 盘向其传输数据, 我编写了用于代码编译和设置软件为启动项的部署工具.
+    \end{itemize}
+\end{minipage}\\
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{个人总结}
+\begin{tabularx}{\linewidth}{ X@{}  }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] 熟悉 C++11, C++14, C++17 等现代 C++，具有 Qt 等 C++ 框架和嵌入式系统的开发经验.
+        \item[-] 对深度学习以及自然语言处理有研究和开发经验, 熟练掌握 Python 编程语言和常用框架与工具.
+        \item[-] 具备良好的代码风格, 注重代码质量，热衷提高代码的健壮性和可读性, 乐于与人合作交流和讨论.
+        \item[-] 掌握计算机理论基础, 计算机底层原理和良好的算法与数据结构基础.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+%\vfill
+%\center{\footnotesize Last updated: \today}
+\end{CJK}
+\end{document}
