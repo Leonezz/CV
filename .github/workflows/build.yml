@@ -8,21 +8,40 @@ jobs:
     env:
       # Edit here with the names of your latex file and directory (can use ".")
       DIR: .
-      FILE: cv
+      FILE_FULL_TEXT: cv
+      FILE_ONE_PAGE: cv-one-page
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: cv
+      - name: Set up Git repository for EN version
+        uses: actions/checkout@v3
+        with:
+          ref: en
+          path: en
+      - name: Set up Git repository for ZH-CN version
+        uses: actions/checkout@v3
+        with:
+          ref: zh-cn
+          path: zh-cn
+      - name: cv-en
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ env.FILE }}
-          working_directory: ${{ env.DIR }}
+          root_file: |
+            ${{ env.FILE_FULL_TEXT }}
+            ${{ env.FILE_ONE_PAGE }}
+          working_directory: ${{ env.DIR }}/en
+      - name: cv-zh-cn
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: |
+            ${{ env.FILE_FULL_TEXT }}
+            ${{ env.FILE_ONE_PAGE }}
+          working_directory: ${{ env.DIR }}/zh-cn
       - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+        run: mkdir -p github_artifacts/en && mv ${{ env.DIR }}/en/*.pdf ./github_artifacts/
+        run: mkdir -p github_artifacts/zh-cn && mv ${{ env.DIR }}/zh-cn/*.pdf ./github_artifacts/
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.FILE }}.pdf
+          name: personal-cv-files
           path: ./github_artifacts
   deploy:
     needs: [build]
