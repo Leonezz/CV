@@ -58,7 +58,7 @@ jobs:
         with:
           path: github_artifacts
       - name: move
-        run: mkdir -p github_deploy/en && mv github_artifacts/en/* github_deploy/en && mkdir -p github_deploy/zh-cn && mv github_artifacts/zh-cn/* github_deploy/zh-cn
+        run: mkdir -p github_deploy && mv -r github_artifacts github_deploy
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
