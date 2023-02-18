@@ -21,19 +21,25 @@ jobs:
         with:
           ref: zh-cn
           path: zh-cn
-      - name: cv-en
+      - name: cv-en-full-text
         uses: dante-ev/latex-action@latest
         with:
-          root_file: |
-            ${{ env.FILE_FULL_TEXT }}
-            ${{ env.FILE_ONE_PAGE }}
+          root_file: ${{ env.FILE_FULL_TEXT }}
           working_directory: ${{ env.DIR }}/en
-      - name: cv-zh-cn
+      - name: cv-en-one-page
         uses: dante-ev/latex-action@latest
         with:
-          root_file: |
-            ${{ env.FILE_FULL_TEXT }}
-            ${{ env.FILE_ONE_PAGE }}
+          root_file: ${{ env.FILE_ONE_PAGE }}
+          working_directory: ${{ env.DIR }}/en
+      - name: cv-zh-cn-full-text
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ env.FILE_FULL_TEXT }}
+          working_directory: ${{ env.DIR }}/zh-cn
+      - name: cv-zh-cn-one-page
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ env.FILE_ONE_PAGE }}
           working_directory: ${{ env.DIR }}/zh-cn
       - name: move
         run: mkdir -p github_artifacts/en && mv ${{ env.DIR }}/en/*.pdf ./github_artifacts/ && mkdir -p github_artifacts/zh-cn && mv ${{ env.DIR }}/zh-cn/*.pdf ./github_artifacts/
