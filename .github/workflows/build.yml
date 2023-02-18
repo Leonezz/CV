@@ -36,8 +36,7 @@ jobs:
             ${{ env.FILE_ONE_PAGE }}
           working_directory: ${{ env.DIR }}/zh-cn
       - name: move
-        run: mkdir -p github_artifacts/en && mv ${{ env.DIR }}/en/*.pdf ./github_artifacts/
-        run: mkdir -p github_artifacts/zh-cn && mv ${{ env.DIR }}/zh-cn/*.pdf ./github_artifacts/
+        run: mkdir -p github_artifacts/en && mv ${{ env.DIR }}/en/*.pdf ./github_artifacts/ && mkdir -p github_artifacts/zh-cn && mv ${{ env.DIR }}/zh-cn/*.pdf ./github_artifacts/
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v2
         with:
