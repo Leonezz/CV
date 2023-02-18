@@ -119,14 +119,7 @@
 % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
 % \end{tabularx}
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{zhuwenq} \\[7.5pt]
-\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \  
-\href{https://zhuwenq-blog.netlify.app}{\raisebox{-0.05\height}\faGlobe \ Blog} \ $|$ \ 
-\href{mailto:zhuwenqa@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ zhuwenqa@outlook.com} \ $|$ \ 
-\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \ $|$ \
-\raisebox{-0.05\height}\faUserCircle \ 软件开发工程师 \\
-\end{tabularx}
+\input{header.tex}
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
@@ -157,19 +150,19 @@
 \section{项目经历}
 
 \begin{tabularx}{\linewidth}{ @{}X@{}  }
-\textbf{基于电磁感应原理的金属表面平整度检测系统}, \textit{项目负责人}.
+\textbf{基于电磁感应原理的金属表面平整度检测系统} (嵌入式系统), \textit{项目负责人}.
 \signed{2018.9 - 2018.11}\\[3.75pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[-] 项目中, 我们设计了一种微小尺度的 PCB 线圈作为电磁传感器, 并且使用专用 IC 驱动该传感器.
-        \item[-] 我们使用专用 IC 采集电磁线圈与被测金属表面之间的电磁阻抗强度, 并将其编码为数字信号.
+        \item[-] 项目中, 我们设计了一种微小尺度的电磁传感器, 并且使用专用 IC 驱动该传感器.
+        \item[-] 该传感器被用来采集电磁线圈与被测金属表面之间的电磁阻抗强度, 其代表传感器和被测金属表面之间的距离.
         \item[-] 为实现自动扫描, 我们搭建了一个步进电机驱动的二维运动平台, 使用 G-code 实现对其的控制.
     \end{itemize}
 \end{minipage}
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}}, \textit{项目负责人}.
+    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} (桌面软件), \textit{项目负责人}.
     \signed{2019.6 - 2019.12} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
@@ -181,7 +174,7 @@
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \textbf{用于智能垃圾桶的嵌入式系统}, \textit{项目负责人}.
+    \textbf{用于智能垃圾桶的嵌入式系统} (嵌入式系统), \textit{项目负责人}.
     \signed{2020.12 - 2021.5} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
