@@ -119,7 +119,14 @@
 % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
 % \end{tabularx}
 
-\input{header.tex}
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{zhuwenq} \\[7.5pt]
+\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \  
+\href{https://zhuwenq-blog.netlify.app}{\raisebox{-0.05\height}\faGlobe \ Blog} \ $|$ \ 
+\href{mailto:zhuwenqa@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ zhuwenqa@outlook.com} \ $|$ \ 
+\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \ $|$ \
+\raisebox{-0.05\height}\faUserCircle \ 软件开发工程师 \\
+\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
@@ -130,7 +137,7 @@
 我目前在南京航空航天大学计算机科学与技术学院攻读硕士学位, 我的研究兴趣包括\textbf{自然语言处理}, \textbf{参数高效的轻量化迁移学习}和\textbf{信息抽取}.
 攻读硕士学位之前, 我曾就读于南京航空航天大学物理系光学专业, 并获得工学学士学位.
 
-除专业学习之外, 我对许多东西都有广泛的兴趣. 我的主要兴趣包括: Modern C++, 嵌入式系统, 深度学习技术, 读书, 摄影和冲咖啡.
+除专业学习之外, 我对许多东西都有广泛的兴趣. 我的主要兴趣包括: Modern C++, 嵌入式系统, 较为先进的深度学习技术, 读书, 摄影和冲咖啡.
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
@@ -141,8 +148,8 @@
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[-] GPA: 3.2/5, 排名: 9/25
-        \item[-] 曾获国家励志奖学金(2020), 优秀学生奖学金(2020), 学业奖学金(2018, 2019, 2020).
+        \item[-] GPA 3.2/5, 排名：9/25,CET-4:540,CET-6:426
+        \item[-] 曾获国家励志奖学金(2020), 优秀学生奖学金(2020)，学业奖学金(2018，2019，2020).
         \item[-] 曾主持和参与省级科创项目两项, 校级科创项目一项.
         \item[-] 获得南京航空航天大学 2021 届"学术专长"类推免资格.
     \end{itemize}
@@ -154,22 +161,21 @@
 \section{项目经历}
 
 \begin{tabularx}{\linewidth}{ @{}X@{}  }
-\textbf{基于电磁感应原理的金属表面平整度检测系统} (嵌入式系统), \textit{项目负责人}.
+\textbf{基于电磁感应原理的金属表面平整度检测系统}, \textit{项目负责人}.
 \signed{2018.9 - 2018.11}\\[3.75pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
         \item[-] 2019 年学校科创项目, 受南京航空航天大学大学生创新创业训练计划资助.
-        \item[-] 项目中, 我们设计并实现了一种微小尺度的电磁传感器, 该传感器由专用 IC 驱动.
-        \item[-] 该传感器被用来采集电磁线圈与被测金属表面之间的电磁阻抗强度, 其代表传感器和被测金属表面之间的距离.
-        \item[-] 我们通过大量实验采集多对电磁阻抗数值-距离数据,并通过最小二乘估计算法将其拟合到一个多项式函数,
-        通过该多项式函数我们就可以从一定范围的电磁感应强度数值计算出距离.
+        \item[-] 项目中, 我们设计了一种微小尺度的 PCB 线圈作为电磁传感器, 并且使用专用 IC 驱动该传感器.
+        \item[-] 我们使用专用 IC 采集电磁线圈与被测金属表面之间的电磁阻抗强度, 并将其编码为数字信号.
+        \item[-] 我们使用该数字信号代表传感器和被测金属表面之间的距离, 通过实验采集多对电磁阻抗数值-距离. 对于采集到的数据, 我们通过最小二乘估计算法将其拟合到一个多项式函数, 通过该多项式函数我们就可以从一定范围的电磁感应强度数值计算出距离.
         \item[-] 为实现自动的表面扫描, 我们实现了一个步进电机驱动的二维运动平台, 使用 G-code 实现对其的控制.
     \end{itemize}
 \end{minipage}\\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} (桌面软件), \textit{项目负责人}.
+    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}}, \textit{项目负责人}.
     \signed{2019.6 - 2019.12} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
@@ -183,15 +189,13 @@
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \textbf{智能垃圾桶系统} (嵌入式系统), \textit{项目负责人}.
+    \textbf{智能垃圾桶系统}, \textit{项目负责人}.
     \signed{2020.12 - 2021.5} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
             \item[-] 本项目中, 我设计了用于该智能垃圾桶的嵌入式系统的软件部分和硬件部分.
-            \item[-] 对于硬件部分, 我设计了一个 STM32F103 单片机的核心板和用于驱动 6 个传感器和 1 个执行器以及一个 MODBUS 通信接口的驱动板.
-            作为总结, 我们使用了 5 个串口和 1 个 ADC 接口.
-            \item[-] 对于软件部分, 我将 MODBUS 协议栈从机部分的一个开源实现迁移到 STM32 平台作为嵌入式系统与上位机系统的通信协议.
-            另外我基于 STM32 HAL 代码库对所有传感器和执行器做了封装.
+            \item[-] 对于硬件部分, 我设计了一个 STM32F103 单片机的核心板和用于驱动 6 个传感器和 1 个执行器以及一个 MODBUS 通信接口的驱动板. 作为总结, 我们使用了 5 个串口和 1 个 ADC 接口.
+            \item[-] 对于软件部分, 我将 MODBUS 协议栈从机部分的一个开源实现迁移到 STM32 平台作为嵌入式系统与上位机系统的通信协议. 另外我基于 STM32 HAL 代码库对所有传感器和执行器做了封装.
         \end{itemize}
         \end{minipage}
 \end{tabularx}
@@ -251,9 +255,9 @@
 \signed{2020.6 - 2020.8}\\[3.75pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[-] 参与公司的物理实验设备热力学参数测试仪的嵌入式 Linux 软件开发工作, 利用物理知识对软件需求建模分析.
+        \item[-] 参与公司的物理实验设备热力学参数测试仪的嵌入式 Linux 软件开发工作，利用物理知识对软件需求建模分析.
         \item[-] 使用 Qt 软件开发框架开发了实验设备驱动和交互的嵌入式软件, 实现了串口读取温度传感器数据和串口控制加热器的功能以及基于最小二乘估计算法的数据分析功能.
-        \item[-] 软件最终部署到运行 Ubuntu 操作系统的 ARM 设备中, 由于设备硬件已经组装完成且已部署在客户场地, 只能通过 U 盘向其传输数据, 我编写了用于代码编译和设置软件为启动项的部署工具.
+        \item[-] 软件最终部署到运行 Ubuntu 操作系统的 ARM 设备中, 由于设备硬件已经组装完成, 只能通过 U 盘向其传输数据, 我编写了用于代码编译和设置软件为启动项的部署工具.
     \end{itemize}
 \end{minipage}\\
 \end{tabularx}
@@ -266,10 +270,9 @@
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
         \item[-] 熟悉 C++11, C++14, C++17 等现代 C++，具有 Qt 等 C++ 框架和嵌入式系统的开发经验.
-        \item[-] 对模板元编程有一定了解与兴趣, 正在学习 Nicolai M. Josuttis 所著的 \textit{C++ templates: the complete guide}.
         \item[-] 对深度学习以及自然语言处理有研究和开发经验, 熟悉 Python 编程语言和 pytorch, tensor, jax 等深度学习框架和工具.
         \item[-] 具备良好的代码风格, 注重代码质量，热衷提高代码的健壮性和可读性.
-        \item[-] 掌握计算机理论基础, 计算机底层原理和良好的算法与数据结构基础.
+        \item[-] 掌握计算机理论基础, 包括操作系统, 网络等计算机底层原理和良好的算法与数据结构基础.
         \item[-] 具备良好的文档和工程实践习惯, 乐于与人合作交流和讨论.
     \end{itemize}
 \end{minipage}\\
