@@ -118,11 +118,29 @@
 % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
 % \end{tabularx}
 
-\input{header.tex}
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{zhuwenq} \\[7.5pt]
+\href{https://github.com/leonezz}{\raisebox{-0.05\height}\faGithub\ Leonezz} \ $|$ \  
+\href{https://zhuwenq-blog.netlify.app}{\raisebox{-0.05\height}\faGlobe \ Blog} \ $|$ \ 
+\href{mailto:zhuwenqa@outlook.com}{\raisebox{-0.05\height}\faEnvelope \ zhuwenqa@outlook.com} \ $|$ \ 
+\href{tel:+8618551713651}{\raisebox{-0.05\height}\faMobile \ +86 18551713651} \ $|$ \
+\raisebox{-0.05\height}\faUserCircle \ Software Engineer \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+I am currently a postgraduate major in computer science, my research interests include Natural Language Processing, Parameter Efficient Transfer Learning and Information Extraction. Before my postgraduate's study, I graduate from the optical major of physics faculty.
+
+In addition to my academic study, I am a person of wide interests, my interests include modern C++, embedded systems, advanced deep learning technics, reading books, photography and making coffee.
+
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education Experience}
+\section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
 2021 - present &Master Candidate at \textbf{NUAA} major in \textit{Computer Science and Technology}.
 \signed{\normalsize{(GPA:)}}\\
@@ -134,20 +152,24 @@
 \section{Project Experience}
 
 \begin{tabularx}{\linewidth}{ @{}X@{}  }
-\textbf{A Measuring System of Metal Surface Flatness Based on Electromagnetic Induction Principle} (Embedded System) as \textit{Creator and maintainer}.
+\textbf{A Measuring System of Metal Surface Flatness Based on Electromagnetic Induction Principle} as \textit{Creator and maintainer}.
 \signed{Sept. 2018 - Nov. 2018}\\[3.75pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[-] We designed a tiny electromagnetic sensor and power it with a dedicated IC.
-        \item[-] The sensor collects the electromagnetic impedance value between the coil sensor and the surface of the object
+        \item[-] This project is supported by the NUAA Innovation and Entrepreneurship Program.
+        \item[-] We designed a tiny PCB coil in this project as the electromagnetic sensor and power this sensor with a dedicated chip.
+        \item[-] The dedicated chip collect the electromagnetic impedance value between the coil sensor and the surface of the object
         to be tested, and encode the value into digital data.
+        \item[-] We collect the data that represents the impedance (i.e. the distance between sensor and the surface to be tested)
+        with various distances, and then fit the impedance-distance value pairs with the well-known Least Square Estimation Algorithm
+        into a polynomial function, with which we can calculate distance from a impedance data.
         \item[-] Also note this system is implemented with a 2-axis moving platform powered by G-code thus it is able to scan a surface automatically.
     \end{itemize}
 \end{minipage}\\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} (Desktop Software) as \textit{Creator and maintainer}.
+    \href{https://github.com/leonezz/OpenChart.git}{\textbf{OpenChart}} as \textit{Creator and maintainer}.
     \signed{Jun. 2019 - Dec. 2019} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
@@ -156,6 +178,10 @@
             and a QWebEngine is utilized to load the page and execute the scripts.
             \item[-] For data transferring between the Qt/C++ end and the HTML/javascript end, I setted a socket server with QWebSocketServer
             at the Qt/C++ end and built a brige with QWebChannel to establish a connection.
+            \item[-] During this project, I learned the usages of basic Qt widgets and the powerfull C++ libraries provided by Qt,
+            as well as style customization techniques including CSS.
+            \item[-] I also learned the multi-thread programing patterns during this project. To be specific,
+            I utilize multi-threading to load data files in another thread such that the UI thread dose not stuck.
         \end{itemize}
         \end{minipage}
 \end{tabularx}
@@ -165,9 +191,9 @@
     \signed{Dec. 2020 - May 2021} \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[-] I designed both the hardware and the software of an embedded system for a smart trash bin.
+            \item[-] In this project, I designed both the hardware and the software of an embedded system for a smart trash bin.
             \item[-] For the hardware part, I designed a core board for STM32F103RET6 MCU and a driver board for over 6 sensors
-            and 1 executor as well as the MODBUS interface for data transferring.
+            and 1 executor as well as the MODBUS interface for data transferring. To summarize, 5 U(S)ART and 1 ADC of the MCU are utilized.
             \item[-] For the software part, I adapted a MODBUS slave protocol stack implementation to the MCU platform as the communication
             interface for interaction between MCUs and between MCU and PC, and I implemented all the drivers for the sensors and executor
             based on the STM32 HAL code base.
@@ -178,17 +204,29 @@
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Internship}
+\section{Publications}
+
 \begin{tabularx}{\linewidth}{ @{}X@{} }
-    \textbf{Nanjing Xunxing Electronic Technology Co., Ltd.}
-    \signed{Jun. 2020 - Aug. 2020} \\[3.75pt]
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item[-] Participate in the development of embedded Linux software for the physical experiment equipment (a thermodynamic parameter tester)
-            \item[-] I developed the drive and interaction software for the embedded equipment with the Qt framework.
-        \end{itemize}
-        \end{minipage}
+\textbf{FETL: Fusing Layer Representations for More Efficient Transfer Learning in NLP}. \signed{\textit{zhuwenq}. under review.}\\[3.75pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[-] Following the nascent research area of Parameter Efficient Transfer Learning (PETL),
+        we designed a simple yet effective architecture for PETL in NLP.
+        \item[-] Inspired by the concepts of that knowledge about diverse aspects of language is embedded
+        in different layers of PLM, and that not all of the knowledge is needed for a specific task,
+        we propose to combine the representations from all PLM layers explicitly and individually
+        with a attention-based fusion layer for a better transferring.
+        \item[-] Our network works outside the PLM as a side-network, thus the backpropagation
+        path does not involve the PLM with our method. Hence the training speed and training GPU
+        memory usage are significantly better with our method than with other PETL methods.
+        \item[-] Experiments on both low-resource and high-resource scenarios of the GLUE benchmark
+        show that our method achieves promising results with negligible costs.
+        \item[-] We also try to interpret the inner effects of the proposed fusion layer by analyzing
+        the layer attention vectors task-wisely and token-wisely.
+    \end{itemize}
+    \end{minipage}
 \end{tabularx}
+
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
@@ -197,7 +235,18 @@
 %\nocite{*}
 %\printbibliography[heading=none]
 %\end{refsection}
-
+\section{Internship}
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+    \textbf{Nanjing Xunxing Electronic Technology Co., Ltd.}
+    \signed{Jun. 2020 - Aug. 2020} \\[3.75pt]
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[-] Participate in the development of embedded Linux software for the company's physical experiment equipment (a thermodynamic parameter tester), and I analyze software requirements with my physical knowledge.
+            \item[-] I developed the driver and interactive software for the embedded equipment with the Qt framework, in which I implemented the functions of temperature sensor data reading and the heater controling through serial ports. A simple data analysis function based on the least square estimation algorithm is also implemented.
+            \item[-] The software is finally deployed to the ARM device running the Ubuntu operating system. Since the device hardware has already been assembled, data can only be transferred to it through a USB drive. I wrote a deployment tool for code compilation and setting the software as the startup item with shell script.
+        \end{itemize}
+        \end{minipage}
+\end{tabularx}
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
@@ -205,14 +254,15 @@
 \begin{tabularx}{\linewidth}{@{}l}
 \begin{minipage}[t]{\linewidth}
 \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-    \item[-] Modern C++, Python, Qt and embedded systems.
-    \item[-] Master the theoretical basis of computer science, the underlying principles of computers and a good foundation of algorithms and data structures.
+    \item[-] Modern C++, Python, Qt, and embedded systems.
+    \item[-] Deep learning and NLP, transformer models especially.
+    \item[-] Theoretical basis of computer science, including operating system, networking, the underlying principles of computers and a good foundation of algorithms and data structures.
     \item[-] Possess good documentation and engineering practice habits, and are willing to cooperate, communicate and discuss with others.
 \end{itemize}
 \end{minipage}
 \end{tabularx}
 
-%\vfill
-%\center{\footnotesize Last updated: \today}
+\vfill
+\center{\footnotesize Last updated: \today}
 
 \end{document}
